@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="login")
+@Table(name="LOGIN")
 public class Login {
 /*
 public Login(){
@@ -31,24 +31,24 @@ public  Login(String username, String pwd, String que,String ans,String user)
 }
 */
 @Id
-@Column(name="loginId")
+@Column(name="LOGINID")
 @GeneratedValue(strategy=GenerationType.IDENTITY)
 public int loginId;
 
-@Column(name="username")
+@Column(name="USERNAME")
 public String userName;
 
-@Column(name="password")
+@Column(name="PASSWORD")
 public String pwd;
 
-@Column(name="question")
+@Column(name="QUESTION")
 public String question;
 
-@Column(name="answer")
+@Column(name="ANSWER")
 public String answer;
 
 
-@Column(name="userType")
+@Column(name="USERTYPE")
 public String userType;
 
 public int getLoginId() {

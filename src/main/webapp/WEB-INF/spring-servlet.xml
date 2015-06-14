@@ -15,10 +15,16 @@
 <context:annotation-config/>
   <context:component-scan base-package="com.bank.controller"/> 
 	  <context:component-scan base-package="com.bank.service"/> 
-	  <context:component-scan base-package="com.bank.dao"/> 
-	  
-  <context:property-placeholder location="classpath:database.properties"/>  
-   
+	  <context:component-scan base-package="com.bank.dao"/>
+	  <context:component-scan base-package="com.bank.model"/> 
+<!--    <context:property-placeholder location="classpath:database.properties"/>   
+ --> <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location">
+        <value>classpath:database.properties</value>
+    </property>
+    <property name="ignoreUnresolvablePlaceholders" value="true"/>
+</bean> 
+
   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
   <property name="driverClassName" value="${database.driver}" />
   <property name="url" value="${database.url}" />
@@ -34,9 +40,9 @@
     <value>com.bank.model.Customer</value>
   </list> 
   </property>
-  <property name="hibernateProperties">
+   <property name="hibernateProperties">
   <props>
-  <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+  <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
   <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
   </props>
   </property>

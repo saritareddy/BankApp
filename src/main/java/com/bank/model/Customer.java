@@ -10,48 +10,48 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer")
+@Table(name="CUSTOMER")
 public class Customer {
 
 	@Id
-	@Column(name="custId")
+	@Column(name="CUSTID")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int custId;
 	
-	@Column(name="firstName")
+	@Column(name="FIRSTNAME")
 	public String firstname;
 	
-	@Column(name="lastName")
+	@Column(name="LASTNAME")
 	public String lastname;
 	
-	@Column(name="age")
+	@Column(name="AGE")
 	public int custAge;
 	
-	@Column(name="dob")
+	@Column(name="DOB")
 	public Date dob;
 	
-	@Column(name="address")
+	@Column(name="ADDRESS")
 	public String custAddr;
 	
-	@Column(name="city")
+	@Column(name="CITY")
 	public String city;
 	
-	@Column(name="state")
+	@Column(name="STATE")
 	public String state;
 	
-	@Column(name="country")
+	@Column(name="COUNTRY")
 	public String country;
 	
-	@Column(name="sex")
+	@Column(name="SEX")
 	public String sex;
 	
-	@Column(name="phone")
+	@Column(name="PHONE")
 	public String phone;
 	
-	@Column(name="emailId")
+	@Column(name="EMAILID")
 	public String email;
 	
-	@Column(name="createdBy")
+	@Column(name="CREATEDBY")
 	public int empId;
 
 	public int getCustId() {
